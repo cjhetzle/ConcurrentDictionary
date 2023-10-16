@@ -13,6 +13,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * @author cjhetzle
+ */
 class DictionaryTest {
 	
 	static Dictionary dictionary;
@@ -40,9 +43,10 @@ class DictionaryTest {
 		
 		unsortedList.add(new SimpleEntry<String, Integer>("test" + min, min));
 		unsortedList.add(new SimpleEntry<String, Integer>("test" + max, max));
-		
+		List<Entry<String, Integer>> copy = new ArrayList<Entry<String, Integer>>();
+		copy.addAll(unsortedList);
 		// Let's build the dictionary
-		dictionary.Build(unsortedList);
+		dictionary.Build(copy);
 		
 		System.out.println("+++++++++++++\n");
 	}
@@ -53,8 +57,10 @@ class DictionaryTest {
 	}
 	
 	@AfterEach
-	static void buildDictionary() {
-		dictionary.Build(unsortedList);
+	void buildDictionary() {
+		List<Entry<String, Integer>> copy = new ArrayList<Entry<String, Integer>>();
+		copy.addAll(unsortedList);
+		dictionary.Build(copy);
 	}
 
 	@Test

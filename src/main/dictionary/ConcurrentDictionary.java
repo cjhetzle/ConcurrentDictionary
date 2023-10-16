@@ -8,6 +8,11 @@ import java.util.AbstractMap.SimpleEntry;
 import java.util.Map.Entry;
 import java.util.Random;
 
+/**
+ * Synchronized Dictionary for Java
+ * 
+ * @author cjhetzle
+ */
 public class ConcurrentDictionary implements Dictionary {
 	
 	private int min, max, size;

@@ -4,6 +4,11 @@ import java.util.List;
 import java.util.Map.Entry;
 import java.util.Random;
 
+/**
+ * Requested API for Dictionary
+ * 
+ * @author cjhetzle
+ */
 public interface Dictionary {
 	
 		/*

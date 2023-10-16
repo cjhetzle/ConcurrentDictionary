@@ -14,6 +14,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
+/**
+ * @author cjhetzle
+ */
 class ConcurrentDictionaryTest {
 
 	@BeforeAll
@@ -66,7 +69,6 @@ class ConcurrentDictionaryTest {
 			try {
 				future.get();
 			} catch (Exception e) {
-				// TODO Auto-generated catch block
 				areExceptions = true;
 			}
 		}

@@ -3,9 +3,13 @@ package main.dictionary;
 import java.util.List;
 import java.util.Map.Entry;
 
+/**
+ * @author cjhetzle
+ */
 class BinarySearch {
 	
 	/**
+	 * Basic BinarySearch tailored for our needs
 	 * 
 	 * @param sortedList
 	 * @param value
